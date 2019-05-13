@@ -19,6 +19,8 @@ after_success:
   # login to Docker cli
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --passwod-stdin
+  # tag docker image
+  - docker tag multi-client anamip/multi-client
 
   #take those images and push them to docker hub
   
