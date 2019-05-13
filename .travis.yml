@@ -12,7 +12,11 @@ script:
 
 after_success:
   - docker build -t anamip/multi-client ./client
+<<<<<<< HEAD
   - docker build -t anamip/multi-nginx  ./nginx 
+=======
+  - docker build -t anamip/multi-nginx ./nginx
+>>>>>>> parent of 22e18e3... pushing to docker hub
   - docker build -t anamip/multi-server ./server
   - docker build -t anamip/multi-worker ./worker
 
