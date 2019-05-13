@@ -11,10 +11,10 @@ script:
   - docker run anamip/kwaa npm test -- --coverage
 
 after_success:
-  - docker build -t anamip/multi-client ./client
-  - docker build -t anamip/multi-nginx ./nginx -f ./nginx/Dockerfile.dev ./nginx
-  - docker build -t anamip/multi-server ./server
-  - docker build -t anamip/multi-worker ./worker
+  - docker build -t anamip/multi-client -f ./client
+  - docker build -t anamip/multi-nginx -f ./nginx 
+  - docker build -t anamip/multi-server -f ./server
+  - docker build -t anamip/multi-worker -f ./worker
 
   # login to Docker cli
 
