@@ -20,15 +20,12 @@ after_success:
   # login to Docker cli
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # tag docker image
+   
 
 
   #take those images and push them to docker hub
   
   - docker push anamip/multi-client
-  - docker push anamip/multi-nginx
   - docker push anamip/multi-server
   - docker push anamip/multi-worker
-
-
- 
+  - docker push anamip/multi-nginx
